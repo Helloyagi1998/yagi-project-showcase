@@ -220,6 +220,196 @@
                 text-align: center;
             }
         }
+
+        .profile-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .profile-section img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid gold;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+        }
+
+        .profile-section h2 {
+            margin-top: 18px;
+            font-size: 30px;
+            color: white;
+        }
+
+        .profile-section p {
+            font-size: 18px;
+            color: #f0f0f0;
+            margin-top: 8px;
+        }
+
+        .project-card {
+            background: #f8f9fc;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+            transition: 0.3s;
+            border-left: 6px solid gold;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .project-card h3 {
+            color: #0b1f3a;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .project-card p {
+            color: #333;
+            margin-bottom: 22px;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .project-buttons a {
+            display: inline-block;
+            text-decoration: none;
+            background: gold;
+            color: black;
+            padding: 12px 22px;
+            border-radius: 12px;
+            margin: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+        }
+
+        .project-buttons a:hover {
+            transform: scale(1.05);
+        }
+
+        .skills-section {
+            background: white;
+            color: black;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 1050px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+        }
+
+        .skills-section h2 {
+            color: #0b1f3a;
+            margin-bottom: 20px;
+            font-size: 34px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .skill-box {
+            background: linear-gradient(135deg, #0b1f3a, #1d4ed8);
+            color: white;
+            padding: 22px;
+            border-radius: 16px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .why-section {
+            background: white;
+            color: black;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 1050px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+        }
+
+        .why-section h2 {
+            color: #0b1f3a;
+            margin-bottom: 20px;
+            font-size: 34px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .why-box {
+            background: #f8f9fc;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .why-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .why-box h3 {
+            color: #0b1f3a;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .why-box p {
+            color: #333;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-links {
+            margin-top: 15px;
+        }
+
+        .footer-links a {
+            color: gold;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 12px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-note {
+            margin-top: 12px;
+            font-size: 15px;
+            color: #cccccc;
+        }
     </style>
 </head>
 <body>
@@ -242,6 +432,12 @@
         <button onclick="showMessage()">Explore My Projects</button>
     </section>
 
+    <section class="profile-section">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500" alt="Developer Profile">
+        <h2>Sunday Emmanuel</h2>
+        <p>Beginner Web Developer • Future Tech Builder 🚀</p>
+    </section>
+
     <section class="section-box" id="about">
         <h2>About Me</h2>
         <p>
@@ -251,15 +447,48 @@
         </p>
     </section>
 
+    <section class="skills-section">
+        <h2>My Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-box">HTML Structure</div>
+            <div class="skill-box">CSS Styling</div>
+            <div class="skill-box">JavaScript Basics</div>
+            <div class="skill-box">Responsive Web Design</div>
+            <div class="skill-box">GitHub Project Publishing</div>
+            <div class="skill-box">Beginner UI Design</div>
+        </div>
+    </section>
+
+    <section class="why-section">
+        <h2>Why Choose Me</h2>
+
+        <div class="why-grid">
+            <div class="why-box">
+                <h3>Clean Design</h3>
+                <p>I focus on building websites that look modern, simple, and professional.</p>
+            </div>
+
+            <div class="why-box">
+                <h3>Growing Skills</h3>
+                <p>Every project I build helps me improve and become stronger in web development.</p>
+            </div>
+
+            <div class="why-box">
+                <h3>Future Ready</h3>
+                <p>I am learning how to create websites and tools that can help real businesses grow online.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="section-box" id="projects">
         <h2>Featured Projects</h2>
 
         <div class="projects-grid">
             <div class="project-card">
-                <div class="tag">HTML • CSS • Beginner Portfolio</div>
-                <h3>Project 1 — Personal Portfolio</h3>
+                <h3>🌐 Personal Portfolio Website</h3>
                 <p>
-                    My first portfolio website where I introduced myself, my goals, and my early journey into tech and web development.
+                    My first personal portfolio website where I introduced myself, my goals, and my growing web development journey.
                 </p>
                 <div class="project-buttons">
                     <a href="https://helloyagi1998.github.io/My-project-portfolio-/" target="_blank">Live Demo</a>
@@ -268,10 +497,9 @@
             </div>
 
             <div class="project-card">
-                <div class="tag">HTML • CSS • Landing Page</div>
-                <h3>Project 2 — Yagi Tech Landing Page</h3>
+                <h3>💼 Yagi Tech Landing Page</h3>
                 <p>
-                    A modern business landing page created to represent a future tech brand, with services, pricing, contact, and visual branding sections.
+                    A clean and modern business landing page designed to represent a future tech brand with services, pricing, contact, and branding.
                 </p>
                 <div class="project-buttons">
                     <a href="https://helloyagi1998.github.io/Yagi-tech-landing-page/" target="_blank">Live Demo</a>
@@ -280,14 +508,24 @@
             </div>
 
             <div class="project-card">
-                <div class="tag">HTML • CSS • JavaScript App</div>
-                <h3>Project 3 — Yagi Calculator App</h3>
+                <h3>🧮 Yagi Calculator App</h3>
                 <p>
-                    A calculator app with multiple math functions, dark mode, percentage, modulus, clear button, validation, and calculation history.
+                    A stylish calculator app with dark mode, percentage, modulus, clear button, and calculation history.
                 </p>
                 <div class="project-buttons">
                     <a href="https://helloyagi1998.github.io/Yagi-calculator-app/" target="_blank">Live Demo</a>
                     <a href="https://github.com/Helloyagi1998/Yagi-calculator-app" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>📝 Yagi To-Do App</h3>
+                <p>
+                    A modern to-do app with dark mode, saved tasks, task counter, date display, and interactive task controls.
+                </p>
+                <div class="project-buttons">
+                    <a href="https://helloyagi1998.github.io/yagi-to-do-app/" target="_blank">Live Demo</a>
+                    <a href="https://github.com/Helloyagi1998/yagi-to-do-app" target="_blank">GitHub Repo</a>
                 </div>
             </div>
         </div>
@@ -304,13 +542,25 @@
             <a href="tel:08146182696">08146182696</a>
         </div>
 
+        <p>I’m open to future collaborations, learning opportunities, and web development projects.</p>
+
         <p class="closing-text">
             More projects are coming soon as I continue growing in web development.
         </p>
     </section>
 
     <footer>
-        <p>© 2026 Yagi Tech Portfolio | Built by Sunday Emmanuel</p>
+        <p>© 2026 Yagi Project Showcase | Built by Sunday Emmanuel</p>
+
+        <div class="footer-links">
+            <a href="mailto:yagitechhub@gmail.com">Email Me</a>
+            <a href="tel:08146182696">Call Me</a>
+            <a href="https://github.com/Helloyagi1998" target="_blank">GitHub</a>
+        </div>
+
+        <p class="footer-note">
+            Learning. Building. Growing. One project at a time 🚀
+        </p>
     </footer>
 
     <script>
