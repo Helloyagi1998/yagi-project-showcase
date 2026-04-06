@@ -90,6 +90,7 @@
 
         .hero-buttons a:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 18px rgba(255, 215, 0, 0.35);
         }
 
         .section-box, .skills-section, .why-section {
@@ -100,7 +101,7 @@
             max-width: 1050px;
             padding: 40px 30px;
             border-radius: 20px;
-            box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.16);
         }
 
         .section-box h2,
@@ -109,6 +110,21 @@
             color: #0b1f3a;
             margin-bottom: 20px;
             font-size: 34px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+
+        .section-box h2::after,
+        .skills-section h2::after,
+        .why-section h2::after {
+            content: "";
+            display: block;
+            width: 60%;
+            height: 4px;
+            background: gold;
+            margin: 8px auto 0;
+            border-radius: 10px;
         }
 
         .section-box p,
@@ -179,7 +195,8 @@
         .skill-box:hover,
         .why-box:hover,
         .project-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-8px);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.18);
         }
 
         .why-box {
@@ -201,7 +218,7 @@
             padding: 30px;
             border-radius: 18px;
             box-shadow: 0 8px 18px rgba(0,0,0,0.10);
-            transition: 0.3s;
+            transition: 0.35s ease;
             border-left: 6px solid gold;
             text-align: left;
         }
@@ -245,6 +262,7 @@
 
         .project-buttons a:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 18px rgba(255, 215, 0, 0.35);
         }
 
         .contact-links {
@@ -273,9 +291,10 @@
 
         footer {
             margin-top: 40px;
-            padding: 28px;
+            padding: 32px 20px;
             font-size: 15px;
             color: #dddddd;
+            background: rgba(0, 0, 0, 0.18);
         }
 
         .footer-links {
@@ -348,15 +367,15 @@
     <section class="profile-section">
         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500" alt="Developer Profile">
         <h2>Sunday Emmanuel</h2>
-        <p>Beginner Web Developer • Future Tech Builder 🚀</p>
+        <p>Aspiring Front-End Web Developer • Building Real Projects 🚀</p>
     </section>
 
     <section class="section-box" id="about">
         <h2>About Me</h2>
         <p>
-            My name is Sunday Emmanuel, and I am passionate about learning how to build modern websites and useful digital tools.
-            I enjoy creating clean layouts, simple user experiences, and projects that solve real problems.
-            I am growing my skills one project at a time and building a strong foundation in web development.
+            My name is Sunday Emmanuel, and I am an aspiring front-end web developer passionate about building modern websites and useful digital tools.
+            I enjoy creating clean user interfaces, responsive layouts, and simple web applications that solve real-world problems.
+            Every project I build helps me grow stronger in HTML, CSS, JavaScript, and practical web development.
         </p>
     </section>
 
@@ -513,7 +532,7 @@
             <div class="project-card">
                 <h3>💼 Yagi Job Tracker</h3>
                 <p>
-                    A simple and practical job tracking app that allows users to add job applications, monitor statuses, delete jobs, clear all entries, and save data using local storage.
+                    A smart job application tracker that allows users to add, edit, search, filter, save, and manage job applications in a clean and responsive interface.
                 </p>
 
                 <span class="tag">HTML</span>
@@ -533,8 +552,8 @@
     <section class="section-box">
         <h2>What I’m Learning Now</h2>
         <p>
-            I am currently improving my JavaScript skills and learning how to build more advanced real-world web apps.
-            My next goal is to start building smarter interactive projects and prepare for freelance or remote opportunities.
+            I am currently improving my JavaScript skills and learning how to build more advanced real-world web applications.
+            My next goal is to continue building interactive projects, strengthen my problem-solving skills, and prepare for freelance, internship, or remote opportunities in tech.
         </p>
     </section>
 
