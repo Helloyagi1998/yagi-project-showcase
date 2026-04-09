@@ -1,844 +1,778 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yagi Tech Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sunday Emmanuel - Front-End Web Developer | Yagi Tech Hub Portfolio" />
+  <meta name="keywords" content="Sunday Emmanuel, Yagi Tech Hub, Front-End Developer, Web Developer, Portfolio, HTML, CSS, JavaScript" />
+  <meta name="author" content="Sunday Emmanuel" />
+  <title>Yagi Tech Hub | Front-End Developer Portfolio</title>
 
-        html {
-            scroll-behavior: smooth;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-        body {
-            background: linear-gradient(to bottom, #081426, #10294d);
-            color: white;
-            text-align: center;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        nav {
-            background: rgba(0, 0, 0, 0.92);
-            padding: 16px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-        }
+    body {
+      background: linear-gradient(180deg, #081426, #0b1f3a, #10294d);
+      color: white;
+      overflow-x: hidden;
+      transition: background 0.4s, color 0.4s;
+    }
 
-        nav a {
-            color: gold;
-            text-decoration: none;
-            margin: 0 14px;
-            font-size: 17px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    body.light {
+      background: linear-gradient(180deg, #f0f4f8, #e0e7f0, #d0d9e8);
+      color: #0b1f3a;
+    }
 
-        nav a:hover {
-            color: white;
-        }
+    a {
+      text-decoration: none;
+    }
 
-        header {
-            background: gold;
-            color: black;
-            padding: 24px;
-            font-size: 30px;
-            font-weight: bold;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-        }
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 18px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
 
-        .hero {
-            padding: 90px 20px 70px;
-        }
+    body.light nav {
+      background: rgba(255,255,255,0.97);
+    }
 
-        .hero h1 {
-            font-size: 46px;
-            margin-bottom: 15px;
-        }
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
 
-        .hero p {
-            font-size: 20px;
-            max-width: 760px;
-            margin: auto;
-            line-height: 1.8;
-            color: #f0f0f0;
-        }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: gold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-        .hero-buttons {
-            margin-top: 30px;
-        }
+    body.light .logo {
+      color: #1d4ed8;
+    }
 
-        .hero-buttons a {
-            display: inline-block;
-            background: gold;
-            color: black;
-            text-decoration: none;
-            padding: 14px 26px;
-            font-size: 18px;
-            border-radius: 12px;
-            margin: 10px;
-            font-weight: bold;
-            transition: 0.3s;
-            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
-        }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
 
-        .hero-buttons a:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 18px rgba(255, 215, 0, 0.35);
-        }
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
 
-        .section-box, .skills-section, .why-section {
-            background: white;
-            color: black;
-            margin: 30px auto;
-            width: 90%;
-            max-width: 1050px;
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 12px 28px rgba(0,0,0,0.16);
-        }
+    .nav-links a {
+      color: gold;
+      font-weight: bold;
+      font-size: 15px;
+      transition: 0.3s;
+    }
 
-        .section-box h2,
-        .skills-section h2,
-        .why-section h2 {
-            color: #0b1f3a;
-            margin-bottom: 20px;
-            font-size: 34px;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 8px;
-        }
+    .nav-links a:hover {
+      opacity: 0.8;
+    }
 
-        .section-box h2::after,
-        .skills-section h2::after,
-        .why-section h2::after {
-            content: "";
-            display: block;
-            width: 60%;
-            height: 4px;
-            background: gold;
-            margin: 8px auto 0;
-            border-radius: 10px;
-        }
+    body.light .nav-links a {
+      color: #1d4ed8;
+    }
 
-        .section-box p,
-        .why-box p {
-            font-size: 18px;
-            line-height: 1.8;
-            max-width: 850px;
-            margin: auto;
-        }
+    .theme-toggle, .menu-toggle {
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: white;
+    }
 
-        .profile-section {
-            margin-top: 40px;
-            text-align: center;
-        }
+    body.light .theme-toggle,
+    body.light .menu-toggle {
+      color: #0b1f3a;
+    }
 
-        .profile-section img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid gold;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-        }
+    .menu-toggle {
+      display: none;
+    }
 
-        .profile-section h2 {
-            margin-top: 18px;
-            font-size: 32px;
-            color: white;
-        }
+    /* HERO */
+    .hero {
+      min-height: 95vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 90px 20px 70px;
+      text-align: center;
+    }
 
-        .profile-section p {
-            font-size: 19px;
-            color: #f0f0f0;
-            margin-top: 8px;
-        }
+    .hero-content {
+      max-width: 950px;
+    }
 
-        .skills-grid,
-        .why-grid,
-        .projects-grid {
-            display: grid;
-            gap: 20px;
-            margin-top: 25px;
-        }
+    .profile-avatar {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, gold, #ffcc00, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 52px;
+      font-weight: bold;
+      color: #081426;
+      border: 6px solid gold;
+      animation: floatLogo 3s ease-in-out infinite;
+    }
 
-        .skills-grid {
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        }
+    .hero h1 {
+      font-size: 50px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
 
-        .why-grid {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        }
+    .highlight {
+      color: gold;
+    }
 
-        .projects-grid {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
+    body.light .highlight {
+      color: #1d4ed8;
+    }
 
-        .skill-box {
-            background: linear-gradient(135deg, #0b1f3a, #1d4ed8);
-            color: white;
-            padding: 22px;
-            border-radius: 16px;
-            font-size: 18px;
-            font-weight: bold;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-            transition: 0.3s;
-        }
+    .typing {
+      font-size: 23px;
+      color: #f7d85a;
+      margin: 15px 0 25px;
+      min-height: 32px;
+      font-weight: bold;
+    }
 
-        .skill-box:hover,
-        .why-box:hover,
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 14px 28px rgba(0,0,0,0.18);
-        }
+    body.light .typing {
+      color: #1d4ed8;
+    }
 
-        .why-box {
-            background: #f8f9fc;
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
+    .hero p {
+      font-size: 19px;
+      line-height: 1.7;
+      max-width: 760px;
+      margin: 0 auto 35px;
+    }
 
-        .why-box h3 {
-            color: #0b1f3a;
-            margin-bottom: 12px;
-            font-size: 22px;
-        }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin-bottom: 35px;
+    }
 
-        .project-card {
-            background: #f8f9fc;
-            padding: 30px;
-            border-radius: 18px;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.10);
-            transition: 0.35s ease;
-            border-left: 6px solid gold;
-            text-align: left;
-        }
+    .hero-buttons a {
+      padding: 16px 28px;
+      border-radius: 50px;
+      font-size: 17px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
 
-        .project-card h3 {
-            color: #0b1f3a;
-            margin-bottom: 15px;
-            font-size: 26px;
-        }
+    .btn-projects {
+      background: linear-gradient(135deg, #ffd700, #ffcc00);
+      color: black;
+    }
 
-        .project-card p {
-            color: #333;
-            margin-bottom: 18px;
-            font-size: 17px;
-            line-height: 1.7;
-        }
+    .btn-contact {
+      background: #1e40af;
+      color: white;
+    }
 
-        .tag {
-            display: inline-block;
-            background: #e8eefc;
-            color: #0b1f3a;
-            padding: 8px 14px;
-            border-radius: 999px;
-            font-size: 14px;
-            font-weight: bold;
-            margin: 0 8px 12px 0;
-        }
+    .hero-buttons a:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
 
-        .project-buttons a {
-            display: inline-block;
-            text-decoration: none;
-            background: gold;
-            color: black;
-            padding: 12px 22px;
-            border-radius: 12px;
-            margin: 8px 8px 0 0;
-            font-weight: bold;
-            transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-        }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
 
-        .project-buttons a:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 18px rgba(255, 215, 0, 0.35);
-        }
+    .stat-box {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 22px;
+      border-radius: 18px;
+      backdrop-filter: blur(8px);
+    }
 
-        .contact-links {
-            margin-top: 20px;
-        }
+    body.light .stat-box {
+      background: rgba(255,255,255,0.8);
+      color: #0b1f3a;
+    }
 
-        .contact-links a {
-            display: inline-block;
-            margin: 12px;
-            color: #0b1f3a;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 18px;
-            transition: 0.3s;
-        }
+    .stat-box h3 {
+      font-size: 32px;
+      color: gold;
+      margin-bottom: 8px;
+    }
 
-        .contact-links a:hover {
-            color: #1d4ed8;
-        }
+    body.light .stat-box h3 {
+      color: #1d4ed8;
+    }
 
-        .closing-text {
-            margin-top: 20px;
-            font-size: 17px;
-            color: #333;
-        }
+    /* GENERAL SECTIONS */
+    .section-box,
+    .skills-section,
+    .journey-section,
+    .services-section {
+      background: white;
+      color: black;
+      width: 90%;
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 50px 28px;
+      border-radius: 24px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.16);
+    }
 
-        footer {
-            margin-top: 40px;
-            padding: 32px 20px;
-            font-size: 15px;
-            color: #dddddd;
-            background: rgba(0, 0, 0, 0.18);
-        }
+    .section-title {
+      font-size: 34px;
+      color: #0b1f3a;
+      margin-bottom: 20px;
+      text-align: center;
+      position: relative;
+      padding-bottom: 8px;
+    }
 
-        .footer-links {
-            margin-top: 15px;
-        }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: gold;
+      margin: 10px auto 0;
+      border-radius: 10px;
+    }
 
-        .footer-links a {
-            color: gold;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 12px;
-            transition: 0.3s;
-        }
+    .section-text {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.8;
+    }
 
-        .footer-links a:hover {
-            color: white;
-        }
+    .skills-grid,
+    .projects-grid,
+    .services-grid {
+      display: grid;
+      gap: 20px;
+      margin-top: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
 
-        .footer-note {
-            margin-top: 12px;
-            font-size: 15px;
-            color: #cccccc;
-        }
+    .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    }
 
-        .stats-section,
-        .journey-section {
-            background: white;
-            color: black;
-            margin: 30px auto;
-            width: 90%;
-            max-width: 1050px;
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-        }
+    .skill-box,
+    .service-box {
+      background: linear-gradient(135deg, #0b1f3a, #1d4ed8);
+      color: white;
+      padding: 24px;
+      border-radius: 18px;
+      font-weight: bold;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+      transition: 0.3s;
+    }
 
-        .stats-section h2,
-        .journey-section h2 {
-            color: #0b1f3a;
-            margin-bottom: 20px;
-            font-size: 34px;
-        }
+    .skill-box:hover,
+    .service-box:hover {
+      transform: translateY(-6px);
+    }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
+    body.light .skill-box,
+    body.light .service-box {
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+    }
 
-        .stat-box {
-            background: linear-gradient(135deg, #0b1f3a, #1d4ed8);
-            color: white;
-            padding: 30px 20px;
-            border-radius: 18px;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-            transition: 0.3s;
-        }
+    .project-card {
+      background: #f8f9fc;
+      padding: 28px;
+      border-radius: 20px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+      border-left: 6px solid gold;
+      transition: 0.35s;
+      opacity: 0;
+      transform: translateY(40px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 300px;
+    }
 
-        .stat-box:hover {
-            transform: translateY(-6px);
-        }
+    .project-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-        .stat-box h3 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: gold;
-        }
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #0b1f3a;
+    }
 
-        .stat-box p {
-            font-size: 17px;
-            color: #f0f0f0;
-        }
+    .project-card p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
 
-        .journey-section p {
-            font-size: 18px;
-            line-height: 1.8;
-            max-width: 850px;
-            margin: auto;
-        }
+    .tag {
+      display: inline-block;
+      background: #e8eefc;
+      color: #0b1f3a;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin: 4px 6px 4px 0;
+    }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 34px;
-            }
+    .featured-tag {
+      background: gold;
+      color: black;
+      font-weight: bold;
+    }
 
-            .hero p {
-                font-size: 18px;
-            }
+    .filter-buttons {
+      text-align: center;
+      margin: 20px 0;
+    }
 
-            .section-box h2,
-            .skills-section h2,
-            .why-section h2 {
-                font-size: 28px;
-            }
+    .filter-btn {
+      padding: 10px 18px;
+      margin: 6px;
+      border: none;
+      border-radius: 999px;
+      background: #0b1f3a;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-            .project-card {
-                text-align: center;
-            }
-        }
-    </style>
+    body.light .filter-btn {
+      background: #1e40af;
+    }
+
+    .filter-btn.active {
+      background: gold;
+      color: black;
+    }
+
+    .project-buttons a {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 12px;
+      margin: 8px 8px 0 0;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .project-buttons a:first-child {
+      background: gold;
+      color: black;
+    }
+
+    .project-buttons a:last-child {
+      background: #1d4ed8;
+      color: white;
+    }
+
+    .project-buttons a:hover {
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0,0,0,0.18);
+      color: #ddd;
+      margin-top: 40px;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: gold;
+      color: black;
+      border: none;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    @keyframes floatLogo {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        background: rgba(0,0,0,0.95);
+        padding: 15px;
+        border-radius: 14px;
+      }
+
+      body.light .nav-links {
+        background: rgba(255,255,255,0.95);
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-container {
+        flex-wrap: wrap;
+      }
+
+      .nav-right {
+        margin-left: auto;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .typing {
+        font-size: 20px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .profile-avatar {
+        width: 145px;
+        height: 145px;
+        font-size: 42px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .hero-buttons a {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <nav>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">🚀 Yagi Tech Hub</div>
+
+      <div class="nav-right">
+        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+
+      <div class="nav-links" id="navLinks">
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
         <a href="#contact">Contact</a>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <header>Yagi Tech Portfolio</header>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="profile-avatar">YTH</div>
+      <h1>Hi, I’m <span class="highlight">Sunday Emmanuel</span></h1>
+      <div class="typing" id="typingText"></div>
 
-    <section class="hero" id="home">
-        <h1>Building Real Projects & Growing as a Web Developer 🚀</h1>
-        <p>
-            Hi, I’m Sunday Emmanuel — a beginner web developer building modern websites, useful tools, and interactive projects step by step.
-            My goal is to keep improving, solve real problems with code, and grow into freelance and remote opportunities.
-        </p>
+      <p>
+        I build modern websites, clean user interfaces, and practical web apps while growing step by step as a front-end web developer.
+        <br><br>
+        My mission: <strong>learn deeply, build real projects, and become remote-job ready.</strong>
+      </p>
 
-        <div class="hero-buttons">
-            <a href="#projects">View My Projects</a>
-            <a href="mailto:yagitechhub@gmail.com">Hire / Contact Me</a>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-projects">🔥 View My Projects</a>
+        <a href="#contact" class="btn-contact">📩 Contact Me</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-box">
+          <h3>18+</h3>
+          <p>Projects Built</p>
         </div>
-    </section>
-
-    <section class="profile-section">
-        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500" alt="Developer Profile">
-        <h2>Sunday Emmanuel</h2>
-        <p>Aspiring Front-End Web Developer • Building Real Projects 🚀</p>
-    </section>
-
-    <section class="section-box" id="about">
-        <h2>About Me</h2>
-        <p>
-            My name is Sunday Emmanuel, and I am an aspiring front-end web developer passionate about building modern websites and useful digital tools.
-            I enjoy creating clean user interfaces, responsive layouts, and simple web applications that solve real-world problems.
-            Every project I build helps me grow stronger in HTML, CSS, JavaScript, and practical web development.
-        </p>
-    </section>
-
-    <section class="skills-section">
-        <h2>My Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-box">HTML Structure</div>
-            <div class="skill-box">CSS Styling</div>
-            <div class="skill-box">JavaScript Basics</div>
-            <div class="skill-box">Responsive Web Design</div>
-            <div class="skill-box">GitHub Project Publishing</div>
-            <div class="skill-box">Beginner UI Design</div>
+        <div class="stat-box">
+          <h3>100%</h3>
+          <p>Frontend Focus</p>
         </div>
-    </section>
-
-    <section class="stats-section">
-        <h2>My Project Stats</h2>
-        <div class="stats-grid">
-            <div class="stat-box">
-                <h3>9+</h3>
-                <p>Projects Built</p>
-            </div>
-
-            <div class="stat-box">
-                <h3>4</h3>
-                <p>Main Technologies Used</p>
-            </div>
-
-            <div class="stat-box">
-                <h3>100%</h3>
-                <p>Hands-On Practice</p>
-            </div>
-
-            <div class="stat-box">
-                <h3>∞</h3>
-                <p>Learning in Progress</p>
-            </div>
+        <div class="stat-box">
+          <h3>Goal</h3>
+          <p>Remote Developer</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="why-section">
-        <h2>Why Choose Me</h2>
-        <div class="why-grid">
-            <div class="why-box">
-                <h3>Clean Design</h3>
-                <p>I focus on building websites that look modern, simple, and professional.</p>
-            </div>
+  <!-- ABOUT -->
+  <section class="section-box" id="about">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-text">
+      I’m Sunday Emmanuel, an aspiring front-end web developer focused on building clean, responsive, and user-friendly websites.
+      I enjoy turning ideas into real digital experiences and solving problems through code.
+      My goal is to grow into a professional developer, build real-world projects, and become ready for freelance and remote opportunities.
+    </p>
+  </section>
 
-            <div class="why-box">
-                <h3>Growing Skills</h3>
-                <p>Every project I build helps me improve and become stronger in web development.</p>
-            </div>
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <h2 class="section-title">What I Can Build</h2>
+    <div class="services-grid">
+      <div class="service-box">🌐 Business Landing Pages</div>
+      <div class="service-box">💼 Personal Portfolio Websites</div>
+      <div class="service-box">📝 Productivity & To-Do Apps</div>
+      <div class="service-box">📊 Admin Dashboards</div>
+      <div class="service-box">🛒 E-Commerce Frontend Pages</div>
+      <div class="service-box">📱 Responsive Mobile-Friendly Websites</div>
+    </div>
+  </section>
 
-            <div class="why-box">
-                <h3>Future Ready</h3>
-                <p>I am learning how to create websites and tools that can help real businesses grow online.</p>
-            </div>
-        </div>
-    </section>
+  <!-- SKILLS -->
+  <section class="skills-section" id="skills">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-box">HTML5</div>
+      <div class="skill-box">CSS3 & Responsive Design</div>
+      <div class="skill-box">JavaScript (ES6+)</div>
+      <div class="skill-box">Git & GitHub</div>
+      <div class="skill-box">Local Storage</div>
+      <div class="skill-box">API Integration</div>
+      <div class="skill-box">UI/UX Basics</div>
+      <div class="skill-box">Problem Solving</div>
+    </div>
+  </section>
 
-    <section class="journey-section">
-        <h2>My Journey</h2>
-        <p>
-            I started my web development journey by learning the basics of HTML and CSS, then gradually moved into JavaScript and interactive web apps.
-            With each new project, I continue improving my confidence, problem-solving skills, and understanding of how real websites are built.
-            My focus is to keep growing, build useful solutions, and become ready for freelance, remote, and real-world tech opportunities.
-        </p>
-    </section>
+  <!-- PROJECTS -->
+  <section class="section-box" id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="filter-buttons" id="filterButtons"></div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </section>
 
-    <section class="section-box" id="projects">
-        <h2>Featured Projects</h2>
+  <!-- JOURNEY -->
+  <section class="journey-section" id="journey">
+    <h2 class="section-title">My Developer Journey</h2>
+    <div class="skills-grid">
+      <div class="skill-box">🌱 Started with HTML & CSS</div>
+      <div class="skill-box">⚡ Added JavaScript interactivity</div>
+      <div class="skill-box">🛠 Built 18+ real projects</div>
+      <div class="skill-box">🎯 Aiming for freelance & remote jobs</div>
+    </div>
+  </section>
 
-        <div class="projects-grid">
+  <!-- CONTACT -->
+  <section class="section-box" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p class="section-text">
+      If you want to connect, collaborate, or hire me, feel free to reach out.
+      <br><br>
+      📧 <a href="mailto:yagitechhub@gmail.com" style="color:#0b1f3a;">yagitechhub@gmail.com</a>
+      <br><br>
+      💻 <a href="https://github.com/Helloyagi1998" target="_blank" rel="noopener noreferrer" style="color:#0b1f3a;">GitHub Profile</a>
+      <br><br>
+      🌍 Available for freelance, collaboration, and frontend opportunities
+    </p>
+  </section>
 
-            <div class="project-card">
-                <h3>🌐 Personal Portfolio Website</h3>
-                <p>
-                    My first personal portfolio website where I introduced myself, my goals, and my growing web development journey.
-                </p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/my-personal-project/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/my-personal-project" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Yagi Tech Hub | Built by Sunday Emmanuel</p>
+    <p style="margin-top:10px;">Learning • Building • Growing One Project at a Time 🚀</p>
+  </footer>
 
-            <div class="project-card">
-                <h3>💼 Yagi Tech Landing Page</h3>
-                <p>
-                    A clean and modern business landing page designed to represent a future tech brand with services, pricing, contact, and branding.
-                </p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/Yagi-tech-landing-page/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/Yagi-tech-landing-page" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
+  <button id="backToTop">↑</button>
 
-            <div class="project-card">
-                <h3>🧮 Yagi Calculator App</h3>
-                <p>
-                    A stylish calculator app with dark mode, percentage, modulus, clear button, and calculation history.
-                </p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/Yagi-calculator-app/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/Yagi-calculator-app" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
+  <script>
+    // Typing Effect
+    const typingText = document.getElementById("typingText");
+    const words = [
+      "Aspiring Front-End Developer",
+      "Building Real Projects",
+      "Future Remote Developer"
+    ];
 
-            <div class="project-card">
-                <h3>📝 Yagi To-Do App</h3>
-                <p>
-                    A modern to-do app with dark mode, saved tasks, task counter, date display, and interactive task controls.
-                </p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-to-do-app/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-to-do-app" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
+    let wordIndex = 0, charIndex = 0, deleting = false;
 
-            <div class="project-card">
-                <h3>🌦️ Yagi Weather App</h3>
-                <p>
-                    A weather app that allows users to search cities and view current weather details in a clean and simple interface.
-                </p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">API</span>
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-weather-app/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-weather-app" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
+    function typeEffect() {
+      const currentWord = words[wordIndex];
 
-            <div class="project-card">
-                <h3>❓ Yagi Quiz App</h3>
-                <p>
-                    An interactive quiz app with score tracking, answer selection, and a fun learning experience.
-                </p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-quiz-app/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-quiz-app" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
+      if (!deleting) {
+        typingText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === currentWord.length) {
+          deleting = true;
+          setTimeout(typeEffect, 1200);
+          return;
+        }
+      } else {
+        typingText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          deleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+        }
+      }
 
-            <div class="project-card">
-                <h3>💰 Yagi Expense Tracker</h3>
-                <p>
-                    A smart expense tracker app with income and expense logging, balance calculation, saved transactions, and clear-all functionality.
-                </p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Local Storage</span>
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-expense-tracker/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-expense-tracker" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
+      setTimeout(typeEffect, deleting ? 50 : 90);
+    }
 
-            <div class="project-card">
-                <h3>📦 Yagi Parcel Tracking App</h3>
-                <p>
-                    A delivery tracking app with tracking ID search, shipment details, progress status steps, dark mode, estimated delivery date, and saved last search.
-                </p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Tracking UI</span>
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-parcel-tracking/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-parcel-tracking" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
+    typeEffect();
 
-            <div class="project-card">
-                <h3>💼 Yagi Job Tracker</h3>
-                <p>
-                    A smart job application tracker that allows users to add, edit, search, filter, save, and manage job applications in a clean and responsive interface.
-                </p>
+    // Projects
+    const projects = [
+      { title: "Personal Portfolio Website", desc: "My first personal portfolio website.", tags: ["HTML", "CSS"], live: "https://helloyagi1998.github.io/my-personal-project/", github: "https://github.com/Helloyagi1998/my-personal-project" },
+      { title: "Yagi Tech Landing Page", desc: "Clean modern business landing page.", tags: ["HTML", "CSS"], live: "https://helloyagi1998.github.io/Yagi-tech-landing-page/", github: "https://github.com/Helloyagi1998/Yagi-tech-landing-page" },
+      { title: "Yagi Calculator App", desc: "Stylish calculator with dark mode and history.", tags: ["JavaScript"], live: "https://helloyagi1998.github.io/Yagi-calculator-app/", github: "https://github.com/Helloyagi1998/Yagi-calculator-app" },
+      { title: "Yagi To-Do App", desc: "Modern to-do list with dark mode and local storage.", tags: ["JavaScript"], live: "https://helloyagi1998.github.io/yagi-to-do-app/", github: "https://github.com/Helloyagi1998/yagi-to-do-app" },
+      { title: "Yagi Weather App", desc: "Real-time weather app using API.", tags: ["JavaScript", "API"], live: "https://helloyagi1998.github.io/yagi-weather-app/", github: "https://github.com/Helloyagi1998/yagi-weather-app" },
+      { title: "Yagi Quiz App", desc: "Interactive quiz application.", tags: ["JavaScript"], live: "https://helloyagi1998.github.io/yagi-quiz-app/", github: "https://github.com/Helloyagi1998/yagi-quiz-app" },
+      { title: "Yagi Expense Tracker", desc: "Expense tracker with local storage.", tags: ["JavaScript"], live: "https://helloyagi1998.github.io/yagi-expense-tracker/", github: "https://github.com/Helloyagi1998/yagi-expense-tracker" },
+      { title: "Yagi Parcel Tracking App", desc: "Delivery tracking app with progress steps.", tags: ["JavaScript"], live: "https://helloyagi1998.github.io/yagi-parcel-tracking/", github: "https://github.com/Helloyagi1998/yagi-parcel-tracking" },
+      { title: "Yagi Job Tracker", desc: "Job application tracker with filters.", tags: ["JavaScript"], live: "https://helloyagi1998.github.io/yagi-job-tracker/", github: "https://github.com/Helloyagi1998/yagi-job-tracker" },
+      { title: "Yagi Password Generator", desc: "Secure password generator with strength meter.", tags: ["JavaScript"], live: "https://helloyagi1998.github.io/yagi-password-generator/", github: "https://github.com/Helloyagi1998/yagi-password-generator" },
+      { title: "Yagi Notes App Pro", desc: "Advanced notes app with pin, search and export.", tags: ["JavaScript", "Featured"], live: "https://helloyagi1998.github.io/yagi-notes-app/", github: "https://github.com/Helloyagi1998/yagi-notes-app" },
+      { title: "Yagi Admin Dashboard Pro", desc: "Modern admin dashboard with analytics.", tags: ["JavaScript", "Featured"], live: "https://helloyagi1998.github.io/yagi-admin-dashboard-pro/", github: "https://github.com/Helloyagi1998/yagi-admin-dashboard-pro" },
+      { title: "Yagi E-Commerce Store Pro", desc: "Full e-commerce store with cart and wishlist.", tags: ["JavaScript", "Featured"], live: "https://helloyagi1998.github.io/yagi-ecommerce-store-pro/", github: "https://github.com/Helloyagi1998/yagi-ecommerce-store-pro" },
+      { title: "Yagi Movie Search", desc: "Movie search app using API.", tags: ["JavaScript", "API"], live: "https://helloyagi1998.github.io/yagi-movie-search/", github: "https://github.com/Helloyagi1998/yagi-movie-search" },
+      { title: "Yagi Resume Builder Pro", desc: "Resume builder with live preview and PDF export.", tags: ["JavaScript", "Featured"], live: "https://helloyagi1998.github.io/yagi-resume-builder-pro/", github: "https://github.com/Helloyagi1998/yagi-resume-builder-pro" },
+      { title: "Yagi Invoice Generator PRO+", desc: "Professional invoice generator.", tags: ["JavaScript"], live: "https://helloyagi1998.github.io/yagi-invoice-generator-pro/", github: "https://github.com/Helloyagi1998/yagi-invoice-generator-pro" },
+      { title: "Yagi Budget Tracker Pro", desc: "Budget tracker with CSV export.", tags: ["JavaScript", "Featured"], live: "https://helloyagi1998.github.io/yagi-budget-tracker-pro/", github: "https://github.com/Helloyagi1998/yagi-budget-tracker-pro" },
+      { title: "Yagi Chat App Pro", desc: "Modern chat app with pinned messages.", tags: ["JavaScript", "Featured"], live: "https://helloyagi1998.github.io/yagi-chat-app-pro/", github: "https://github.com/Helloyagi1998/yagi-chat-app-pro" }
+    ];
 
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Local Storage</span>
+    function renderProjects(filtered) {
+      const container = document.getElementById("projectsGrid");
+      container.innerHTML = "";
 
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-job-tracker/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-job-tracker" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <h3>🔐 Yagi Password Generator</h3>
-                <p>
-                    A clean and modern password generator app that allows users to create secure passwords with adjustable length, uppercase letters, lowercase letters, numbers, symbols, copy-to-clipboard functionality, and password strength checking.
-                </p>
+      filtered.forEach((p, i) => {
+        const card = document.createElement("div");
+        card.className = "project-card";
+        card.innerHTML = `
+          <div>
+            <h3>${p.title}</h3>
+            <p>${p.desc}</p>
+            ${p.tags.map(tag => `<span class="tag ${tag === 'Featured' ? 'featured-tag' : ''}">${tag}</span>`).join('')}
+          </div>
+          <div class="project-buttons" style="margin-top:15px;">
+            <a href="${p.live}" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="${p.github}" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        `;
+        container.appendChild(card);
+        setTimeout(() => card.classList.add("show"), i * 80);
+      });
+    }
 
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Security Tool</span>
+    document.getElementById("filterButtons").innerHTML = `
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+      <button class="filter-btn" data-filter="API">API</button>
+      <button class="filter-btn" data-filter="Featured">Featured</button>
+    `;
 
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-password-generator/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-password-generator" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <h3>📝 Yagi Notes App Pro</h3>
-                <p>
-                    A modern notes management app that allows users to create, edit, delete, pin, search, color-code, export as TXT/PDF, and save notes using local storage in a clean and responsive interface.
-                </p>
+    document.addEventListener("click", function(e) {
+      if (e.target.classList.contains("filter-btn")) {
+        document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+        e.target.classList.add("active");
+        const filter = e.target.dataset.filter;
+        const filtered = filter === "all" ? projects : projects.filter(p => p.tags.includes(filter));
+        renderProjects(filtered);
+      }
+    });
 
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Local Storage</span>
-                <span class="tag">Export TXT/PDF</span>
+    renderProjects(projects);
 
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-notes-app/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-notes-app" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <h3>📊 Yagi Admin Dashboard Pro</h3>
-                <p>
-                    A modern admin dashboard app with analytics cards, task management, dark mode, search, local storage, export, and a clean responsive interface.
-                </p>
+    // Theme Toggle
+    document.querySelector(".theme-toggle").addEventListener("click", function() {
+      document.body.classList.toggle("light");
+      this.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
+    });
 
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Local Storage</span>
-                <span class="tag">Dashboard UI</span>
+    // Mobile Menu
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.getElementById("navLinks");
 
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-admin-dashboard-pro/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-admin-dashboard-pro" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <h3>🛍 Yagi E-Commerce Store Pro</h3>
-                <p>
-                    A modern e-commerce store app with product search, category filtering, shopping cart, wishlist, quantity controls, dark mode, checkout, and saved cart data using local storage.
-                </p>
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
 
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Local Storage</span>
-                <span class="tag">Shopping Cart</span>
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => navLinks.classList.remove("show"));
+    });
 
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-ecommerce-store-pro/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-ecommerce-store-pro" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <h3>🎬 Yagi Movie Search</h3>
-                <p>
-                    A modern movie search app that allows users to search for movies, view posters, ratings, release dates, and movie details in a clean and responsive interface.
-                </p>
+    // Back to Top
+    const backToTop = document.getElementById("backToTop");
 
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">API</span>
-                <span class="tag">Movie Search</span>
+    window.addEventListener("scroll", () => {
+      backToTop.style.display = window.scrollY > 400 ? "block" : "none";
+    });
 
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-movie-search/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-movie-search" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <h3>📄 Yagi Resume Builder Pro</h3>
-                <p>
-                    A professional resume builder app with live preview, resume generation, clear form, and print/save as PDF functionality.
-                </p>
-
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Print PDF</span>
-
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-resume-builder-pro/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-resume-builder-pro" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <h3>🧾 Yagi Invoice Generator PRO+</h3>
-                <p>
-                    A professional invoice generator app that allows users to create, preview, print, and save invoices with client details, invoice number, date, pricing, totals, and Local Storage support.
-                </p>
-
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Local Storage</span>
-                <span class="tag">Print Feature</span>
-
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-invoice-generator-pro/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-invoice-generator-pro" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <h3>💰 Yagi Budget Tracker Pro</h3>
-                <p>
-                    A smart budget tracker app with income and expense logging, category filters, search, local storage saving, live balance summary, and CSV export support.
-                </p>
-
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Local Storage</span>
-                <span class="tag">CSV Export</span>
-
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-budget-tracker-pro/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-budget-tracker-pro" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <h3>💬 Yagi Chat App Pro</h3>
-                <p>
-                    A modern chat app with sent and received message bubbles, pinned messages, search, dark mode, character counter, local storage saving, and chat export support.
-                </p>
-
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Local Storage</span>
-                <span class="tag">Dark Mode</span>
-                <span class="tag">Export Feature</span>
-
-                <div class="project-buttons">
-                    <a href="https://helloyagi1998.github.io/yagi-chat-app-pro/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Helloyagi1998/yagi-chat-app-pro" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <section class="section-box">
-        <h2>What I’m Learning Now</h2>
-        <p>
-            I am currently improving my JavaScript skills and learning how to build more advanced real-world web applications.
-            My next goal is to continue building interactive projects, strengthen my problem-solving skills, and prepare for freelance, internship, or remote opportunities in tech.
-        </p>
-    </section>
-
-    <section class="section-box" id="contact">
-        <h2>Contact Me</h2>
-        <p>
-            If you would like to follow my journey, connect, or work with me in the future, feel free to reach out.
-        </p>
-
-        <div class="contact-links">
-            <a href="mailto:yagitechhub@gmail.com">📧 yagitechhub@gmail.com</a>
-            <a href="tel:08146182696">📞 08146182696</a>
-            <a href="https://github.com/Helloyagi1998" target="_blank">💻 GitHub Profile</a>
-        </div>
-
-        <p class="closing-text">
-            I’m open to future collaborations, learning opportunities, and web development projects.
-        </p>
-    </section>
-
-    <footer>
-        <p>© 2026 Yagi Project Showcase | Built by Sunday Emmanuel</p>
-
-        <div class="footer-links">
-            <a href="mailto:yagitechhub@gmail.com">Email Me</a>
-            <a href="tel:08146182696">Call Me</a>
-            <a href="https://github.com/Helloyagi1998" target="_blank">GitHub</a>
-        </div>
-
-        <p class="footer-note">
-            Learning. Building. Growing. One project at a time 🚀
-        </p>
-    </footer>
-
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>
