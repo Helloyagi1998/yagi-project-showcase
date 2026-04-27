@@ -609,6 +609,11 @@
   <!-- PROJECTS -->
   <section class="section-box" id="projects">
     <h2 class="section-title">Featured Projects</h2>
+
+    <p style="text-align:center; margin-bottom:20px; font-size:18px;">
+      💼 My projects are real-world applications built to solve real problems — not just tutorials.
+    </p>
+    
     <div class="filter-buttons" id="filterButtons"></div>
     <div class="projects-grid" id="projectsGrid"></div>
   </section>
@@ -684,6 +689,13 @@
 
     // Projects
     const projects = [
+      {
+        title: "Yagi Logistics Tracking System (SaaS)",
+        desc: "🚀 Full SaaS-style parcel delivery platform with secure admin dashboard and real-time customer tracking portal. Built with Firebase Authentication & Realtime Database. Includes live status updates, delivery timeline, ETA system, and shareable tracking links.",
+        tags: ["JavaScript", "Firebase", "SaaS", "Featured"],
+        live: "https://helloyagi1998.github.io/yagi-logistics-tracking-system/",
+        github: "https://github.com/Helloyagi1998/yagi-logistics-tracking-system"
+      },
       { title: "Personal Portfolio Website", desc: "My first personal portfolio website.", tags: ["HTML", "CSS"], live: "https://helloyagi1998.github.io/my-personal-project/", github: "https://github.com/Helloyagi1998/my-personal-project" },
       { title: "Yagi Tech Landing Page", desc: "Clean modern business landing page.", tags: ["HTML", "CSS"], live: "https://helloyagi1998.github.io/Yagi-tech-landing-page/", github: "https://github.com/Helloyagi1998/Yagi-tech-landing-page" },
       { title: "Yagi Calculator App", desc: "Stylish calculator with dark mode and history.", tags: ["JavaScript"], live: "https://helloyagi1998.github.io/Yagi-calculator-app/", github: "https://github.com/Helloyagi1998/Yagi-calculator-app" },
@@ -691,13 +703,6 @@
       { title: "Yagi Weather App", desc: "Real-time weather app using API.", tags: ["JavaScript", "API"], live: "https://helloyagi1998.github.io/yagi-weather-app/", github: "https://github.com/Helloyagi1998/yagi-weather-app" },
       { title: "Yagi Quiz App", desc: "Interactive quiz application.", tags: ["JavaScript"], live: "https://helloyagi1998.github.io/yagi-quiz-app/", github: "https://github.com/Helloyagi1998/yagi-quiz-app" },
       { title: "Yagi Expense Tracker", desc: "Expense tracker with local storage.", tags: ["JavaScript"], live: "https://helloyagi1998.github.io/yagi-expense-tracker/", github: "https://github.com/Helloyagi1998/yagi-expense-tracker" },
-      { 
-        title: "Yagi Logistics Tracking System",
-        desc: "🚚 SaaS-style real-time parcel tracking system with admin authentication and customer tracking portal. Built using Firebase Authentication and Realtime Database. Features include secure admin login, parcel creation, live status updates, delivery timeline, ETA tracking, and shareable tracking links.",
-        tags: ["JavaScript", "Firebase", "SaaS", "Featured"],
-        live: "https://helloyagi1998.github.io/yagi-logistics-tracking-system/",
-        github: "https://github.com/Helloyagi1998/yagi-logistics-tracking-system" 
-      },
       { title: "Yagi Job Tracker", desc: "Job application tracker with filters.", tags: ["JavaScript"], live: "https://helloyagi1998.github.io/yagi-job-tracker/", github: "https://github.com/Helloyagi1998/yagi-job-tracker" },
       { title: "Yagi Password Generator", desc: "Secure password generator with strength meter.", tags: ["JavaScript"], live: "https://helloyagi1998.github.io/yagi-password-generator/", github: "https://github.com/Helloyagi1998/yagi-password-generator" },
       { title: "Yagi Notes App Pro", desc: "Advanced notes app with pin, search and export.", tags: ["JavaScript", "Featured"], live: "https://helloyagi1998.github.io/yagi-notes-app/", github: "https://github.com/Helloyagi1998/yagi-notes-app" },
@@ -721,7 +726,7 @@
           <div>
             <h3>${p.title}</h3>
             <p>${p.desc}</p>
-            ${p.tags.map(tag => `<span class="tag ${tag === 'Featured' ? 'featured-tag' : ''}">${tag}</span>`).join('')}
+            ${p.tags.map(tag => `<span class="tag ${tag === 'Featured' ? 'featured-tag' : ''}">${tag === 'Featured' ? '🔥 ' + tag : tag}</span>`).join('')}
           </div>
           <div class="project-buttons" style="margin-top:15px;">
             <a href="${p.live}" target="_blank" rel="noopener noreferrer">Live Demo</a>
