@@ -1,63 +1,63 @@
-# Hi, I'm Sunday Emmanuel 👋
+# 👋 Hi, I’m Sunday Emmanuel
 
-## 🚀 Beginner Web Developer from Nigeria
+🚀 Front-End Developer | Builder of Real Web Applications  
+💼 Founder of Yagi Tech Hub
 
-I am learning web development step by step and building modern websites, landing pages, and useful web apps.
-
-I enjoy creating clean, simple, and professional designs while improving my skills every day.
-
----
-
-## 🛠️ Skills
-- HTML
-- CSS
-- JavaScript
-- Responsive Web Design
-- Beginner GitHub Projects
+I design and build modern, responsive web applications that solve real-world problems.  
+My focus is on clean UI, smooth user experience, and functional systems using JavaScript and Firebase.
 
 ---
 
-## 📂 My Projects
+## 🔥 Featured Project
 
-### 1. My Project Portfolio
-A personal portfolio website showing my journey into tech and web development.
+### 🚚 Yagi Logistics Tracking System (SaaS)
+A full parcel tracking platform with admin dashboard and real-time customer tracking.
 
-### 2. Yagi Tech Landing Page
-A clean business landing page designed for a future tech brand.
+**Features:**
+- 🔐 Admin authentication system
+- 📦 Parcel creation & tracking
+- 🔄 Live delivery status updates
+- 📊 Delivery timeline & ETA system
+- 🔗 Shareable tracking access
 
-### 3. Yagi Calculator App
-A calculator app with:
-- Dark Mode
-- Percentage
-- Modulus
-- Clear Button
-- Calculation History
-
----
-
-## 🎯 My Goal
-My goal is to become a skilled web developer, work remotely, and build useful websites and tools for businesses.
+👉 Live Demo:  
+https://helloyagi1998.github.io/yagi-logistics-tracking-system/
 
 ---
 
-## 📫 Contact Me
-- **Email:** yagitechhub@gmail.com
+## 💻 Projects
+
+- 🌐 Portfolio Website  
+- 🧮 Calculator App (with history & dark mode)  
+- 📝 To-Do App  
+- 📊 Admin Dashboard  
+- 🛒 E-Commerce UI  
+- 📱 Multiple responsive web apps  
 
 ---
 
-## 💡 Fun Fact
-I love learning new things and I don’t want to ever stop learning.
-<!--
-**Helloyagi1998/helloyagi1998** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 🧠 Skills
 
-Here are some ideas to get you started:
+- HTML5  
+- CSS3 & Responsive Design  
+- JavaScript (ES6+)  
+- Firebase (Auth & Realtime DB)  
+- Git & GitHub  
+- UI/UX Design Basics  
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 🎯 Goal
+
+To work remotely as a professional developer and build impactful web applications for businesses and users worldwide.
+
+---
+
+## 📩 Contact Me
+
+📧 yagitechhub@gmail.com  
+💻 https://github.com/Helloyagi1998  
+
+---
+
+💡 I believe in continuous learning and building real solutions.
